@@ -44,6 +44,7 @@ public class Main {
 		    }
 
 		    boolean isPrime = true;
+		    if (b < 2) isPrime = false;
 		    double n = Math.sqrt(b);
 		    for (int i = 2; i <= n; i++) {
 			if (b % i == 0) {
