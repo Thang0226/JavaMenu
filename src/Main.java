@@ -86,8 +86,6 @@ public class Main {
 			case 11:
 			    System.out.println("Month " + month + " has 30 days.");
 			    break;
-			default:
-			    System.out.println("Not a valid month!");
 		    }
 		    break;
 
