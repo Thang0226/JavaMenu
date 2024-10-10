@@ -2,19 +2,18 @@ import java.util.Scanner;
 
 public class Main {
     public static void main(String[] args) {
-	int choice = -1;
 	Scanner scanner = new Scanner(System.in);
 
-	while (choice != 0) {
+	while (true) {
 	    System.out.println();
 	    System.out.println("""
-		    Menu:
-		    1. Calculate sum of odd numbers
-		    2. Check prime number
-		    3. Find number of days in a month
-		    0. Exit
-		    Enter your choice:""");
-	    choice = scanner.nextInt();
+			Menu:
+			1. Calculate sum of odd numbers
+			2. Check prime number
+			3. Find number of days in a month
+			0. Exit
+			Enter your choice:""");
+	    int choice = scanner.nextInt();
 
 	    switch (choice) {
 		case 1:
@@ -43,8 +42,7 @@ public class Main {
 			b = scanner.nextInt();
 		    }
 
-		    boolean isPrime = true;
-		    if (b < 2) isPrime = false;
+		    boolean isPrime = b >= 2;
 		    double n = Math.sqrt(b);
 		    for (int i = 2; i <= n; i++) {
 			if (b % i == 0) {
